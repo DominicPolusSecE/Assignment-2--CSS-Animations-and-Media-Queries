@@ -1,0 +1,174 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background: #ff4500;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+
+.hero {
+    background: url('https://images.squarespace-cdn.com/content/v1/5eb8df4ad4280a6eb9c4edb2/a9706ea4-789d-46c1-9ba7-25c4add3cfb3/Featured-Image-Shonen-Jump-wrong-better-Cropped.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: slideIn 2s ease-in-out;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta {
+    padding: 12px 24px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta:hover {
+    background-color: #e5533c;
+    transform: scale(1.1);
+}
+
+
+#genres {
+    padding: 3rem 1rem;
+    background-color: #fff;
+}
+
+.genre-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.genre {
+    width: 45%;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: #ffefd5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.genre:hover {
+    transform: translateY(-10px);
+}
+
+.genre h3 {
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.genre p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+
+#about {
+    padding: 2rem 1rem;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+footer {
+    background: #ff4500;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+
+@keyframes slideIn {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .genre-list {
+        flex-direction: column;
+    }
+
+    .genre {
+        width: 100%;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .cta {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .cta {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+}
